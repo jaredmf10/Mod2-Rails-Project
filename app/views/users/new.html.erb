@@ -1,0 +1,11 @@
+<h1>Create a New Account</h1>
+
+<%= form_for @user do |f| %>
+<%= f.label :Name%>
+<%= f.text_field :name%><br>
+
+<%= f.label :location%>
+<%= f.text_field :location%><br>
+
+<%= f.submit %>
+<% end %>
