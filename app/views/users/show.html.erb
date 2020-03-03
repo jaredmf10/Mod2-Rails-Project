@@ -5,4 +5,5 @@
  <%= link_to a.date_time, a %>
  <% end %>
 
-<%= button_to "Delete Account", @user, :method => 'delete' %>
+<%= button_to "Delete User", @user, :method => :delete, data: {confirm: "Are you sure?", }%>
+
