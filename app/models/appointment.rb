@@ -1,5 +1,5 @@
 class Appointment < ApplicationRecord
-    has_many :users
-    has_many :pets 
+    belongs_to :user
+    belongs_to :pet 
 
 end
