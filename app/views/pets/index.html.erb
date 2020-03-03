@@ -1,5 +1,10 @@
-<h1>All Pets</h1>
+<h1> All Pets </h1>
 
 <% @pets.each do |pet| %>
-   <%= link_to pet.name, pet %> <br>
+ <p> Photo: <%= pet.img_url %><p>
+ <p> Name: <%= link_to pet.name, pet %><p>
+ <p> Age: <%= pet.age %><p>
+ <p> Available: <%= pet.available %><p>
+ <br>
  <% end %>
+

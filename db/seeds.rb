@@ -8,11 +8,9 @@
 require 'faker'
 
 Shelter.destroy_all 
-Pet.destroy_all 
-User.destroy_all 
+Pet.destroy_all
+User.destroy_all
 Appointment.destroy_all 
-
-
 
 
 
@@ -22,11 +20,11 @@ shelter3 = Shelter.create(name: "Floofers", location: "Brooklyn")
 shelter4 = Shelter.create(name: "SI Homes", location: "Staten Island")
 shelter5 = Shelter.create(name: "Boogie Pup", location: "Bronx")
 
-pet1 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: Faker::Creature::Dog.breed, age: rand(1..7), gender: "male", shelter_id:shelter1.id, available: true)
-pet2 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: Faker::Creature::Dog.breed, age: rand(1..7), gender: "female", shelter_id:shelter2.id, available: true)
-pet3 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: Faker::Creature::Dog.breed, age: rand(1..7), gender: "male", shelter_id:shelter3.id, available: true)
-pet4 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: Faker::Creature::Dog.breed, age: rand(1..7), gender: "female", shelter_id:shelter4.id, available: true)
-pet5 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: Faker::Creature::Dog.breed, age: rand(1..7), gender: "male", shelter_id:shelter5.id, available: true)
+pet1 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: Faker::Creature::Dog.breed, age: rand(1..7), gender: "male", shelter_id: shelter1.id, available: true)
+pet2 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: Faker::Creature::Dog.breed, age: rand(1..7), gender: "female", shelter_id: shelter2.id, available: true)
+pet3 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: Faker::Creature::Dog.breed, age: rand(1..7), gender: "male", shelter_id: shelter3.id, available: true)
+pet4 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: Faker::Creature::Dog.breed, age: rand(1..7), gender: "female", shelter_id: shelter4.id, available: true)
+pet5 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: Faker::Creature::Dog.breed, age: rand(1..7), gender: "male", shelter_id: shelter5.id, available: true)
 
 user1 = User.create(name:Faker::Name.unique.name, location: "Manhattan")
 user2 = User.create(name:Faker::Name.unique.name, location: "Queens")

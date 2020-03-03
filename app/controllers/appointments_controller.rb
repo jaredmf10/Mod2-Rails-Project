@@ -6,20 +6,21 @@ class AppointmentsController < ApplicationController
     end
 
     def new
-        @appointment.new
+        @appointment = Appointment.new 
     end
 
     def create
-        @appointment = Appointment.create(appointment_params)
+        @appointment = Appointment.create(appointment_strong_params)
 
         redirect_to @appointment
     end
 
-    private
 
-    def appointments_params
-        params.require.(:appointment).permit(:user_id, :pet_id)
-        
+
+private
+
+    def appointment_strong_params
+    params.require(:appointment).permit(:user_id, :pet_id)
     end
     
-end
+end 
