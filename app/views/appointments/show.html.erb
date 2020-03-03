@@ -1,0 +1,8 @@
+<h1>Appointment Details</h1>
+
+Shelter: <%= @appointment.pet.shelter.name %> <br>
+Location: <%= @appointment.pet.shelter.location %> <br>
+Pet: <%= @appointment.pet.name %> <br>
+
+<br>
+<%= button_to "Cancel Appointment", @appointment, :method => 'delete'%>

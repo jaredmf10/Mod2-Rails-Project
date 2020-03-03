@@ -1,5 +1,8 @@
 <h1> New York City Shelters </h1>
 
 <% @shelters.each do |shelter| %>
-   <%= shelter.name %><br>
+   Name: <%= link_to shelter.name, shelter %><br>
+   Location: <%= shelter.location %><br>
+   <br>
  <% end %>
+

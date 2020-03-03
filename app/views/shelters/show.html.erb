@@ -1,0 +1,7 @@
+<h1><%= @shelter.name %></h1>
+<%= @shelter.location%> 
+
+<p><% @shelter.pets.each do |pet| %>
+Name: <%= link_to pet.name, pet %><br>
+Breed: <%= pet.breed %>
+<% end %></p>
