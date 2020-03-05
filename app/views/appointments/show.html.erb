@@ -5,15 +5,14 @@
 <p> Location: <%= @appointment.pet.shelter.location %>
 <p> Date and Time: <%= @appointment.date_time %>
 
-<%= button_to "Delete Appointment", @appointment, :method => :delete, data: {confirm: "Are you sure?"}%>
-
+<br>
+<p><%= link_to  "Return To User Page", user_path %><p>
+<p><%= link_to "Edit Appointment", edit_appointment_path %></p>
+<%= button_to "Cancel Appointment", @appointment, :method => :delete, data: {confirm: "Are you sure?"}%>
 <br>
 <h4> "We pride ourselves in being the #1 organization to provide our furry friends with safe homes here at Puppy Love!" </h4>
     
 
     
-
-
-
 
 

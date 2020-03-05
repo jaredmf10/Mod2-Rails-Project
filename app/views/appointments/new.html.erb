@@ -1,13 +1,17 @@
 <h1> Schedule New Appointment </h1>
 
 <%= form_for @appointment do |f| %>
-    <%= f.label :name %>
-    <%= f.collection_select :user_id, @users, :id, :name %>
-    <br>
-     <%= f.label :pet %>
-    <%= f.collection_select :pet_id, @pets, :id, :name %>
-    <br>
-    Available Appointments: <%= f.collection_select :date_time, @appointments, :date_time, :date_time %><br>
-    <br>
-    <%= f.submit %>
-    <% end %>  
+
+<%= f.hidden_field :pet_id, value: @pet.id %>
+<%= f.hidden_field :user_id, value: current_user.id %>
+<%= f.datetime_field :date_time %>
+<br>
+<%= f.submit %>
+<% end %>
+
+ 
+    
+    
+
+
+

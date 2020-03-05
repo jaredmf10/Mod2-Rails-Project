@@ -3,7 +3,14 @@
 <h4>Age: <%= @pet.age %><br></h4>
 <h4>Breed: <%= @pet.breed %><br></h4>
 <h4>Gender: <%= @pet.gender %><br></h4>
+<%= button_to "New Appointment with #{@pet.name}", new_appointment_path, params: {pet_id: @pet.id}, method: :new%>
+<p>View Shelter: <%= link_to @pet.shelter.name, "/shelters/#{@pet.shelter.id}" %></p>
 <h4> "We pride ourselves in being the #1 organization to provide our furry friends with safe homes here at Puppy Love!" </h4>
 <br>
 <%= image_tag "#{@pet.img_url}" %><br> 
 <br>
+
+
+
+
+

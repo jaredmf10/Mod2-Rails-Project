@@ -13,7 +13,6 @@ User.destroy_all
 Appointment.destroy_all 
 
 
-
 shelter1 = Shelter.create(name: "NYC Shelter", location: "Manhattan")
 shelter2 = Shelter.create(name: "Puppy Palace", location: "Queens")
 shelter3 = Shelter.create(name: "Floofers", location: "Brooklyn")
@@ -76,14 +75,13 @@ pet46 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: "Golden Retrie
 pet47 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: "Golden Retriever", age: rand(1..7), gender: "male", shelter_id: shelter11.id, img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWIlqg48zqpFiGe9x_26Fr1h4bXuMhu0B-b9AiM-VhKbxNLK1a5w&s")
 pet48 = Pet.create(name: Faker::Creature::Dog.unique.name, breed: "Golden Retriever", age: rand(1..7), gender: "female", shelter_id: shelter12.id, img_url: "https://www.holidogtimes.com/wp-content/uploads/2016/04/five-universal-personality-traits-of-the-golden-retriever-556d979a5dbc8.jpg")
 
-user1 = User.create(name:Faker::Name.unique.name, location: "Manhattan")
-user2 = User.create(name:Faker::Name.unique.name, location: "Queens")
-user3 = User.create(name:Faker::Name.unique.name, location: "Brooklyn")
-user4 = User.create(name:Faker::Name.unique.name, location: "Queens")
-user5 = User.create(name:Faker::Name.unique.name, location: "Bronx")
+user1 = User.create(name:Faker::Name.unique.name, location: "Manhattan", password: "1234")
+user2 = User.create(name:Faker::Name.unique.name, location: "Queens", password: "1234")
+user3 = User.create(name:Faker::Name.unique.name, location: "Brooklyn", password: "1234")
+user4 = User.create(name:Faker::Name.unique.name, location: "Queens", password: "1234")
+user5 = User.create(name:Faker::Name.unique.name, location: "Bronx", password: "1234")
 
-appt1 = Appointment.create(user_id: user1.id, pet_id: pet1.id, date_time: "03/15/2020, 11:30 A.M." )
-appt2 = Appointment.create(user_id: user2.id, pet_id: pet2.id, date_time: "03/15/2020, 12:30 P.M.")
-appt3 = Appointment.create(user_id: user3.id, pet_id: pet3.id, date_time: "03/16/2020, 1:30 P.M.")
-appt4 = Appointment.create(user_id: user4.id, pet_id: pet4.id, date_time: "03/17/2020, 10:30 A.M.")
-appt5 = Appointment.create(user_id: user5.id, pet_id: pet5.id, date_time: "03/18/2020, 09:30 A.M.")
+appt1 = Appointment.create(user_id: user1.id, pet_id: pet1.id, date_time: DateTime.new(2020,03,14,3,30))
+appt2 = Appointment.create(user_id: user2.id, pet_id: pet2.id, date_time: DateTime.new(2020,03,15,3,30))
+appt3 = Appointment.create(user_id: user3.id, pet_id: pet3.id, date_time: DateTime.new(2020,03,16,3,30))
+appt4 = Appointment.create(user_id: user4.id, pet_id: pet4.id, date_time: DateTime.new(2020,03,17,3,30))

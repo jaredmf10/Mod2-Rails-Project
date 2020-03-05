@@ -1,17 +1,21 @@
 <h1> Welcome To "Puppy Love" <%= @user.name %> ! </h1>
 <br>
-<h4>Current Location Is:  <%= @user.location %></h4>
+<h3>Current Location Is:  <%= @user.location %></h3>
 
-<p>Scheduled Appointments: <p>
+<h3><p>Scheduled Appointments: <p></h3>
 <% @user.appointments.each do |a|%>
-<%= link_to a.date_time, a %><br>
+Date/Time: <%= link_to a.date_time, a %><br>
  <% end %>
-
  <br>
 
-See All Shelters Near: <%= link_to "#{@user.location}", shelters_path %>
-<br>
-<%= button_to "Delete User Account", @user, :method => :delete, data: {confirm: "Are you sure?"}%><br>
-<%= button_to "Schedule New Appointment", new_appointment_path %><br>
-<br>
+<h3> Puppy Love Shelters </h3>
+    <p>Nearest Shelter: <%= link_to "#{@user.location} Shelters", "/#{@user.location}" %></p>
+    <p>All Shelters: <%= link_to  "View All", shelters_path %></p>
+    <br>
+    <br>
+    <% if current_user == @user %>
+    <%= button_to "Delete User Account", @user, :method => :delete, data: {confirm: "Are you sure?"}%><br>
+    <% end %>
+    <br>
+    <%= button_to "Logout", logout_path, :method => :delete, data: {confirm: "Are you sure?" }%>
 <h4> "We pride ourselves in being the #1 organization to provide our furry friends with safe homes here at Puppy Love!" </h4>

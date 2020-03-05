@@ -1,0 +1,11 @@
+<h1> Please Login </h1>
+<%= flash[:notice] if flash[:notice] %>
+<%= form_tag "/login", method: :post do %>
+    <%= label_tag :name %>
+    <%= text_field_tag :name%>
+
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+
+    <%= submit_tag "Login" %>
+<% end %>
