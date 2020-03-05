@@ -1,9 +1,8 @@
-<h1> Welcome <%= @user.name %>!!! </h1>
+<h1> My Name is: <%= current_user.name%> </h1>
 
-<p> Scheduled Appointments: <p>
-<% @user.appointments.each do |a|%>
- <%= link_to a.date_time, a %>
- <% end %>
 
-<%= button_to "Delete User", @user, :method => :delete, data: {confirm: "Are you sure?", }%>
+<% if current_user == @user %>
+<%= button_to "Delete User", @user, :method => :delete, data: {confirm: "Are you sure?" }%>
+<% end %>
 
+<%= button_to "Logout", logout_path, :method => :delete, data: {confirm: "Are you sure?" }%>
