@@ -1,0 +1,10 @@
+<h1>Schedule Appointment</h1>
+
+<%= form_for @appointment do |f| %>
+<%= f.collection_select :user_id, @users, :id, :name %> <br>
+<%= f.hidden_field :pet_id, value: @pet.id %>
+
+Select Date: <%= select_date Date.today, prefix: :start_date %> <br>
+<%= f.submit %>
+<% end %>
+

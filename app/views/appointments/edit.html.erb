@@ -1,0 +1,8 @@
+<h1>Edit Appointment</h1>
+
+<%= form_for @appointment do |f| %>
+Select Pet: <%= f.collection_select :pet_id, Pet.all, :id, :name %> <br>
+<%= f.collection_select :user_id, User.all, :id, :name %> <br>
+Select Date: <%= select_date Date.today, prefix: :start_date %> <br>
+<%= f.submit %>
+<% end %>

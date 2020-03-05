@@ -1,5 +1,13 @@
-<h1> Welcome To: <%= @shelter.name %> </h1>
+<h1><%= @shelter.name %></h1>
+<%= @shelter.location%> 
+<br>
+<br>
+<h3>All Pets</h3>
+<p><% @shelter.pets.each do |pet| %>
+Name: <%= link_to pet.name, pet %><br>
+Breed: <%= pet.breed %> <br>
+<br>
+<% end %></p>
 
-<% @shelter.pets.each do |pet| %>
-<%= pet.name %>
-<% end %>
+<p><%= link_to  "Return to #{@shelter.location} Locations", "/#{@shelter.location}" %></p>
+<p><%= link_to  "Show All Shelters", shelters_path %></p>

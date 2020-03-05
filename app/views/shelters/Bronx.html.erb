@@ -1,0 +1,9 @@
+<h1>Bronx Shelters</h1>
+
+<% Shelter.all.each do |s| %>
+<% if s.location == 'Bronx' %>
+<%= link_to s.name, s %> <br>
+<% end %>
+<% end %>
+
+<p><%= link_to  "Show All Shelters", shelters_path %></p>
