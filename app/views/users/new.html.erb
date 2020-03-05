@@ -1,9 +1,11 @@
-<h1> Create a New Account </h1>
+<h1>Please Sign up to Make a Pet Happy</h1>
 
 <%= form_for @user do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :location %>
-<%= f.text_field :location %>
-<%= f.submit %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit%>
 <% end %>
