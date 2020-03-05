@@ -1,8 +1,15 @@
-<h1> Appointment Details </h1>
+<h1> Appointment Confirmation </h1>
 
+<p> Pet Name: <%= @appointment.pet.name %>
 <p> Shelter Name: <%= @appointment.pet.shelter.name %>
 <p> Location: <%= @appointment.pet.shelter.location %>
 <p> Date and Time: <%= @appointment.date_time %>
+
+<%= button_to "Delete Appointment", @appointment, :method => :delete, data: {confirm: "Are you sure?"}%>
+
+<br>
+<h4> "We pride ourselves in being the #1 organization to provide our furry friends with safe homes here at Puppy Love!" </h4>
+    
 
     
 

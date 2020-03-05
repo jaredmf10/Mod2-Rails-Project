@@ -1,5 +1,10 @@
 <h1> Welcome To: <%= @shelter.name %> </h1>
 
 <% @shelter.pets.each do |pet| %>
-<%= pet.name %>
+Pet Name: <%= link_to pet.name, pet %><br>
+Gender: <%= pet.gender %><br>
+Breed: <%= pet.breed %><br>
+<br>
 <% end %>
+
+

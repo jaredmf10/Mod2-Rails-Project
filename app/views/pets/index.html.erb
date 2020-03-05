@@ -1,10 +1,10 @@
 <h1> All Pets </h1>
 
 <% @pets.each do |pet| %>
- <p> Photo: <%= pet.img_url %><p>
  <p> Name: <%= link_to pet.name, pet %><p>
  <p> Age: <%= pet.age %><p>
- <p> Available: <%= pet.available %><p>
+ <p> Breed: <%= pet.breed %><br>
+  <p> Shelter Name: <%= pet.shelter.name %><br>
  <br>
  <% end %>
 

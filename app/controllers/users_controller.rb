@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     def create
      @user = User.create(user_strong_params)
 
-     redirect_to @user
+     redirect_to new_user_path
     end
 
     def destroy
