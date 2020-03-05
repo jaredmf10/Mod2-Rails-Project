@@ -1,5 +1,7 @@
 <h1><%= @user.name %></h1>
-<%= @user.location %>
+Home Loction: <%= @user.location %>
+<p><%= link_to "#{@user.location} Shelters", "/#{@user.location}" %></p>
+<p><%= link_to  "View All Shelters", shelters_path %></p>
 <br>
 <br>
 <h3> Appointments </h3>
@@ -7,7 +9,9 @@
 Date/Time: <%= link_to a.date_time, a %><br>
 <% end %>
 
-<%= button_to "Delete Account", @user, :method => 'delete'%>
+<p><%= button_to "Delete Account", @user, :method => 'delete'%></p>
+
+
 
 
 

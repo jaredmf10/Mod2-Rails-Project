@@ -8,10 +8,22 @@ class SheltersController < ApplicationController
       @shelter = Shelter.find(params[:id])
     end
 
-    # def manhattan_locations
-    #     Shelter.all.map do |l|
-    #         l.location == 'Manhattan'
-    #     end
-    # end
+    def Manhattan
+      render :Manhattan
+    end
+
+    def Bronx
+      render :Bronx
+    end
+
+    def Queens
+      render :Queens
+    end
+
+    def Brooklyn
+      render :Brooklyn
+    end
+
+
 
 end

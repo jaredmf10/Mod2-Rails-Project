@@ -3,6 +3,9 @@
 Shelter: <%= @appointment.pet.shelter.name %> <br>
 Location: <%= @appointment.pet.shelter.location %> <br>
 Pet: <%= @appointment.pet.name %> <br>
+Date/Time: <%= @appointment.date_time %> <br>
 
 <br>
+<p><%= link_to  "Return To User Page", user_path %></p>
+<p><%= link_to "Edit Appointment", edit_appointment_path %></p>
 <%= button_to "Cancel Appointment", @appointment, :method => 'delete'%>
