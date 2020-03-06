@@ -1,4 +1,6 @@
 <h1> Welcome To "Puppy Love" <%= @user.name %> ! </h1>
+<%= video_tag "homepagedog.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, playsinline: :playsinline, class: "home_video" %>
+
 <br>
 <h3>Current Location Is:  <%= @user.location %></h3>
 

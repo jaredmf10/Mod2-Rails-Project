@@ -1,4 +1,14 @@
-<h1> Please Login </h1>
+<h1> WELCOME TO "PUPPY LOVE" </h1><br>
+<h3> PLEASE LOGIN </h3>
+
+
+
+<%= video_tag "singledog.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, playsinline: :playsinline, class: "home_video" %>
+
+
+
+
+
 <%= flash[:notice] if flash[:notice] %>
 <%= form_tag "/login", method: :post do %>
     <%= label_tag :name %>
@@ -9,3 +19,5 @@
 
     <%= submit_tag "Login" %>
 <% end %>
+<br>
+<h3> "We pride ourselves in being the #1 organization to provide our furry friends with safe homes here at Puppy Love!" </h3>

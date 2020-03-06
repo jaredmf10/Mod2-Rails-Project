@@ -1,4 +1,6 @@
 <h1> "Puppy Love NYC Shelters" </h1>
+<%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, playsinline: :playsinline, class: "home_video" %>
+
 
 <% @shelters.each do |shelter| %>
    Name: <%= link_to shelter.name, shelter %><br>

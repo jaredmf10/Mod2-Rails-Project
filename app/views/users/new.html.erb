@@ -1,6 +1,6 @@
 <h1> WELCOME TO PUPPY LOVE </h1>
 <h3> Sign up </h3>
-
+<%= video_tag "singledog.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, playsinline: :playsinline, class: "home_video" %>
 <%= form_for @user do |f| %>
 <%= f.label :name, "Name:" %>
 <%= f.text_field :name %>

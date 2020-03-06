@@ -1,4 +1,5 @@
 <h1>Queens Shelters</h1>
+<%= video_tag "video.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, playsinline: :playsinline, class: "home_video" %>
 
 <% Shelter.all.each do |s| %>
 <% if s.location == 'Queens' %>

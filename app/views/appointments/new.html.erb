@@ -1,5 +1,5 @@
 <h1> Schedule New Appointment </h1>
-
+<%= video_tag "homepagedog.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, playsinline: :playsinline, class: "home_video" %>
 <%= form_for @appointment do |f| %>
 
 <%= f.hidden_field :pet_id, value: @pet.id %>
