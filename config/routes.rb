@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :shelters
   resources :users
 
+
   get "/Manhattan", to: "shelters#Manhattan"
   get "/Brooklyn", to: "shelters#Brooklyn"
   get "/Bronx", to: "shelters#Bronx"
